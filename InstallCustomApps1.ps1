@@ -4,4 +4,4 @@ winget install --id=Foxit.FoxitReader -e --accept-package-agreements --accept-so
 winget install --id=Chocolatey.Chocolatey  -e --accept-package-agreements --accept-source-agreements --disable-interactivity
 winget install --id=Greenshot.Greenshot  -e --accept-package-agreements --accept-source-agreements --disable-interactivity
 winget install --id=Microsoft.Teams  -e --accept-package-agreements --accept-source-agreements --disable-interactivity
-"c:\users\all users\chocolatey\choco" install FileZilla -y
+
