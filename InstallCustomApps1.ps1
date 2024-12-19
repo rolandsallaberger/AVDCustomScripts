@@ -7,7 +7,8 @@ winget install --id=Foxit.FoxitReader -e --accept-package-agreements --accept-so
 winget install --id=Chocolatey.Chocolatey  -e --accept-package-agreements --accept-source-agreements --disable-interactivity > "c:\winget-log-$timestamp.txt" 2>&1
 winget install --id=Greenshot.Greenshot  -e --accept-package-agreements --accept-source-agreements --disable-interactivity > "c:\winget-log-$timestamp.txt" 2>&1
 #winget install --id=Microsoft.Teams  -e --accept-package-agreements --accept-source-agreements --disable-interactivity > "c:\winget-log-$timestamp.txt" 2>&1
-choco install FileZilla -y
+#choco install FileZilla -y
 Set-Content -Path "c:\PfadZurDatei1.txt" -Value "test"
 $stopwatch.Stop()
 $elapsedTime = $stopwatch.Elapsed
+Exit 0
