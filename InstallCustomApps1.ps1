@@ -11,15 +11,22 @@ Write-Host "Running Add-AppxPackage -RegisterByFamilyName..."
 $addAppxResult = Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe -Verbose | Tee-Object -FilePath $logFile
 Write-Host "Add-AppxPackage result: $addAppxResult"
 
+winget |tee-object -filepath c:\win.txt
+"C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.21.10120.0_x64__8wekyb3d8bbwe\winget.exe" |tee-object -filepath c:\win1.txt
+
 # Ergebnis von winget install anzeigen und in Log-Datei speichern
 Write-Host "Running winget install command..."
-$wingetResult = winget install --id=7zip.7zip -e --accept-package-agreements --accept-source-agreements --disable-interactivity | Tee-Object -FilePath $logFile
+$logFile = "C:\winget-log-7zip$timestamp.txt"
+$wingetResult = "C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.21.10120.0_x64__8wekyb3d8bbwe\winget.exe" install --id=7zip.7zip -e --accept-package-agreements --accept-source-agreements --disable-interactivity --verbose| Tee-Object -FilePath $logFile
 Write-Host "Winget install result: $wingetResult"
-$wingetResult = winget install --id=Foxit.FoxitReader -e --accept-package-agreements --accept-source-agreements --disable-interactivity  | Tee-Object -FilePath $logFile
+$logFile = "C:\winget-log-foxit$timestamp.txt"
+$wingetResult = "C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.21.10120.0_x64__8wekyb3d8bbwe\winget.exe" install --id=Foxit.FoxitReader -e --accept-package-agreements --accept-source-agreements --disable-interactivity  --verbose| Tee-Object -FilePath $logFile
 Write-Host "Winget install result: $wingetResult"
-$wingetResult = winget install --id=Chocolatey.Chocolatey  -e --accept-package-agreements --accept-source-agreements --disable-interactivity  | Tee-Object -FilePath $logFile
+$logFile = "C:\winget-log-choco$timestamp.txt"
+$wingetResult = "C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.21.10120.0_x64__8wekyb3d8bbwe\winget.exe" install --id=Chocolatey.Chocolatey  -e --accept-package-agreements --accept-source-agreements --disable-interactivity  --verbose | Tee-Object -FilePath $logFile
 Write-Host "Winget install result: $wingetResult"
-$wingetResult = winget install --id=Greenshot.Greenshot  -e --accept-package-agreements --accept-source-agreements --disable-interactivity  | Tee-Object -FilePath $logFile
+$logFile = "C:\winget-log-greenshot$timestamp.txt"
+$wingetResult = "C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.21.10120.0_x64__8wekyb3d8bbwe\winget.exe" install --id=Greenshot.Greenshot  -e --accept-package-agreements --accept-source-agreements --disable-interactivity  --verbose | Tee-Object -FilePath $logFile
 Write-Host "Winget install result: $wingetResult"
 
 
