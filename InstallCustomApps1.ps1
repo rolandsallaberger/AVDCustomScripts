@@ -6,6 +6,7 @@ choco install 7zip.install -y
 choco install foxitreader -y
 choco install filezilla -y
 choco install greenshot -y --execution-timeout 300
+choco install office365business --params "'/productid:O365BusinessEEANoTeamsRetail /exclude:Access Groove Lync Onedrive /language:de-de /updates:true /eula:true'" -y
 
 New-Item -Type Directory -Path "c:\\" -Name temp
 invoke-webrequest -uri "https://aka.ms/downloadazcopy-v10-windows" -OutFile "c:\\temp\\azcopy.zip"
