@@ -5,7 +5,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install 7zip.install -y
 choco install foxitreader -y
 choco install filezilla -y
-#choco install greenshot -y
+choco install greenshot -y --execution-timeout 300
 
 New-Item -Type Directory -Path "c:\\" -Name temp
 invoke-webrequest -uri "https://aka.ms/downloadazcopy-v10-windows" -OutFile "c:\\temp\\azcopy.zip"
