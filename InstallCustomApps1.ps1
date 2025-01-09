@@ -6,6 +6,7 @@ choco install 7zip.install -y
 choco install foxitreader -y
 choco install filezilla -y
 choco install fslogix -y
+choco install laps -y
 choco install greenshot -y --execution-timeout 300
 choco install office365business --params "'/productid:O365BusinessEEANoTeamsRetail /exclude:Access Groove Lync Onedrive /language:de-de /updates:true /eula:true'" -y
 
