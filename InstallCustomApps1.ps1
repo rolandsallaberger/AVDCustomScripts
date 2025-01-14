@@ -23,7 +23,7 @@ foreach ($user in $localUsers) {
         Write-Host "Fehler beim Hinzufügen von $($user.Name): $_" -ForegroundColor Red
     }
 }
-
+Add-LocalGroupMember -Group $groupName -Member "ad.heschik.at\administrator"
 $groupName = "FSLogix ODFC Exclude List"
 
 # Alle aktiven lokalen Benutzer abrufen
@@ -38,7 +38,7 @@ foreach ($user in $localUsers) {
         Write-Host "Fehler beim Hinzufügen von $($user.Name): $_" -ForegroundColor Red
     }
 }
-
+Add-LocalGroupMember -Group $groupName -Member "ad.heschik.at\administrator"
 
 New-Item -Type Directory -Path "c:\\" -Name temp
 invoke-webrequest -uri "https://aka.ms/downloadazcopy-v10-windows" -OutFile "c:\\temp\\azcopy.zip"
