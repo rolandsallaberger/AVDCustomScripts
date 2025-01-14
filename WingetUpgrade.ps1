@@ -6,3 +6,4 @@ Write-Host "Using Repair-WinGetPackageManager cmdlet to bootstrap WinGet..."
 Repair-WinGetPackageManager -Force -Latest
 Write-Host "Done."
 winget upgrade --all --accept-package-agreements --Accept-Source-Agreements
+winget upgrade --all --accept-package-agreements --Accept-Source-Agreements
